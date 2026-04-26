@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+  <meta name="description" content="A tiny endless runner. Jump, double jump, dodge obstacles, and see how many meters you can survive.">
+  <meta property="og:title" content="Easy Game">
+  <meta property="og:description" content="A tiny endless runner for boring moments.">
+  <meta property="og:type" content="website">
+  <title>Easy Game</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <main class="game-shell">
+    <section class="topbar" aria-label="score board">
+      <div>
+        <span class="label">距离</span>
+        <strong id="distance">0 m</strong>
+      </div>
+      <div>
+        <span class="label">最好</span>
+        <strong id="best">0 m</strong>
+      </div>
+      <button id="restartBtn" type="button">重来</button>
+    </section>
+
+    <section class="stage">
+      <canvas id="game" width="960" height="420" aria-label="runner game"></canvas>
+      <button id="jumpBtn" class="jump-button" type="button" aria-label="跳跃">跳</button>
+      <div id="overlay" class="overlay">
+        <div class="result-card">
+          <h1>Easy Game</h1>
+          <p id="statusText">开始</p>
+          <button id="startBtn" type="button">开始</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="./game.js"></script>
+</body>
+</html>
